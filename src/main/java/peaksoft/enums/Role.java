@@ -1,7 +1,6 @@
-package peaksoft.entiti.enums;
+package peaksoft.enums;
 
 public enum Role {
-    LAPTOP,
-    PHONE,
-    HEAD
+   ADMIN,
+    USER
 }

@@ -1,4 +1,4 @@
-package peaksoft.entiti;
+package peaksoft.enums;
 
 public enum Category {
    LAPTOP,

@@ -1,2 +1,10 @@
-package peaksoft.dto.response;public record FavoriteResponse() {
+package peaksoft.dto.response;
+
+import lombok.Builder;
+
+
+@Builder
+public record FavoriteResponse(
+        Long id
+) {
 }

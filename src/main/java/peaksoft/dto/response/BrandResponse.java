@@ -1,2 +1,11 @@
-package peaksoft.dto.response;public record BrandResponse() {
+package peaksoft.dto.response;
+
+import lombok.Builder;
+
+@Builder
+public record BrandResponse(
+        Long id,
+        String brandName,
+        String image
+) {
 }
