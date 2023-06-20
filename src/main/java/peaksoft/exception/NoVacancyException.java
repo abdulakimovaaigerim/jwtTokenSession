@@ -1,0 +1,11 @@
+package peaksoft.exception;
+
+public class NoVacancyException extends RuntimeException {
+    public NoVacancyException() {
+        super();
+    }
+
+    public NoVacancyException(String message) {
+        super(message);
+    }
+}

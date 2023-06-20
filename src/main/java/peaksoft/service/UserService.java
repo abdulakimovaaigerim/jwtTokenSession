@@ -1,25 +1,29 @@
 package peaksoft.service;
 
-import peaksoft.dto.request.AuthUserRequest;
-import peaksoft.dto.request.SinUpRequest;
+
+import peaksoft.dto.request.AcceptOrRejectRequest;
+import peaksoft.dto.request.RegisterRequest;
 import peaksoft.dto.request.UserRequest;
-import peaksoft.dto.response.*;
+import peaksoft.dto.response.SimpleResponse;
+import peaksoft.dto.response.UserResponse;
+import peaksoft.dto.response.UserTokenResponse;
 
 import java.util.List;
 
 public interface UserService {
+    List<UserResponse> getAllUser();
 
-    UserTokenResponse authenticate(AuthUserRequest userRequest);
+    SimpleResponse register(RegisterRequest registerRequest);
 
-    AuthResponse sinUp(SinUpRequest sinUpRequest);
+    UserTokenResponse authenticate(UserRequest userRequest);
 
-    List<UserAllResponse> getAllUsers();
+    List<UserResponse> getApplications();
 
-    SimpleResponse saveUser(UserRequest userRequest);
+    SimpleResponse acceptResponse(Long restaurantId, AcceptOrRejectRequest acceptOrRejectRequest);
 
-    UserResponse getUserById(Long id);
+    SimpleResponse updateUser(Long userId, RegisterRequest request);
 
-    SimpleResponse updateUser(Long id, UserRequest userRequest);
+    SimpleResponse deleteByIdUser(Long id);
 
-    SimpleResponse deleteById(Long id);
+    UserResponse getById(Long userId);
 }

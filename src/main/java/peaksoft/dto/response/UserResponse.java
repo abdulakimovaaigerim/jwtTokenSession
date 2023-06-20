@@ -4,16 +4,16 @@ import lombok.Builder;
 import peaksoft.enums.Role;
 
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 
 @Builder
-public record UserResponse(
+public record UserResponse (
         Long id,
         String firstName,
         String lastName,
+        LocalDate dateOfBirth,
         String email,
-        ZonedDateTime createDate,
-        ZonedDateTime updateDate,
-        Role role
+        String phoneNumber,
+        Role role,
+        int experience
 ) {
 }
